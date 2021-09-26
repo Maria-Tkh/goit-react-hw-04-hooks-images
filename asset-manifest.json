@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/css/main.a617e044.chunk.css",
+    "main.js": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/main.4d84e452.chunk.js",
+    "main.js.map": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/main.4d84e452.chunk.js.map",
+    "runtime-main.js": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/runtime-main.01d0913a.js",
+    "runtime-main.js.map": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/runtime-main.01d0913a.js.map",
+    "static/js/2.d86a372d.chunk.js": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/2.d86a372d.chunk.js",
+    "static/js/2.d86a372d.chunk.js.map": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/2.d86a372d.chunk.js.map",
+    "static/js/3.e3ce7569.chunk.js": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/3.e3ce7569.chunk.js",
+    "static/js/3.e3ce7569.chunk.js.map": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/3.e3ce7569.chunk.js.map",
+    "index.html": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.d86a372d.chunk.js.LICENSE.txt": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/js/2.d86a372d.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/goit-react-hw-04-hooks-imagesnpm%20install%20--save%20gh-pages/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.01d0913a.js",
+    "static/js/2.d86a372d.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.4d84e452.chunk.js"
+  ]
+}
