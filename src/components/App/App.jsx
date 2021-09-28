@@ -51,7 +51,7 @@ export const App = () => {
   // Реакция на изменение state, делаем запросы
 
   useEffect(() => {
-    async function getGallery() {
+    async function getGallery(_, prevState) {
       try {
         setRequestStatus('pending');
         const gallery = await fetchImages(imageTags, page);
