@@ -4,7 +4,7 @@ import './Modal.css';
 
 const modalRoot = document.querySelector('#modal-root');
 
-export const Modal = (onClose, largeImageURL, tags, children) => {
+export const Modal = ({ onClose, largeImageURL, tags, children }) => {
   // закрытие модалки по Esc
   useEffect(() => {
     window.addEventListener('keydown', handleKeydown);
@@ -31,7 +31,6 @@ export const Modal = (onClose, largeImageURL, tags, children) => {
     <div className="Overlay" onClick={handleBackdropClick}>
       <div className="Modal">
         {children}
-        {/* {this.props.children} */}
         <img src={largeImageURL} alt={tags} />
       </div>
     </div>,

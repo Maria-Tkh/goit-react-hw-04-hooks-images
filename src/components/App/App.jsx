@@ -15,7 +15,7 @@ export const App = () => {
   const [requestStatus, setRequestStatus] = useState('idle');
   const [showModal, setShowModal] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState('');
-  const [tags, setTags] = useState('');
+  // const [tags, setTags] = useState('');
 
   //Делаем запись в state
 
@@ -37,7 +37,7 @@ export const App = () => {
 
   const handleSelectedImage = (largeImageURL, tags) => {
     setLargeImageURL(largeImageURL);
-    setTags(tags);
+    // setTags(tags);
     toggleModal();
   };
 
@@ -53,12 +53,9 @@ export const App = () => {
   useEffect(() => {
     async function getGallery() {
       try {
+        if (imageTags === '') return;
         setRequestStatus('pending');
         const gallery = await fetchImages(imageTags, page);
-        //       setGallery((prevState) => {
-        //   console.log(prevState);
-        //   return prevState;
-        // });
         setGallery(prevState => [...prevState, ...gallery]);
         setRequestStatus('resolved');
         handleScroll();
