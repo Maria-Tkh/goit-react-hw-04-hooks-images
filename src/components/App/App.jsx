@@ -15,7 +15,7 @@ export const App = () => {
   const [requestStatus, setRequestStatus] = useState('idle');
   const [showModal, setShowModal] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState('');
-  // const [tags, setTags] = useState('');
+  const [tags, setTags] = useState('');
 
   //Делаем запись в state
 
@@ -35,9 +35,9 @@ export const App = () => {
     setShowModal(!showModal);
   };
 
-  const handleSelectedImage = (largeImageURL, tags) => {
+  const handleSelectedImage = (largeImageURL, imageTags) => {
     setLargeImageURL(largeImageURL);
-    // setTags(tags);
+    setTags(tags);
     toggleModal();
   };
 
@@ -70,38 +70,12 @@ export const App = () => {
     getGallery();
   }, [imageTags, page]);
 
-  // async componentDidUpdate(_, prevState) {
-  //   const { imageTags, page } = this.state;
-
-  //   if (prevState.imageTags !== imageTags || prevState.page !== page)
-  //     try {
-  //       this.setState({ requestStatus: 'pending' });
-  //       const gallery = await fetchImages(imageTags, page);
-
-  //       this.setState(
-  //         prevState => ({
-  //           gallery: [...prevState.gallery, ...gallery],
-  //           requestStatus: 'resolved',
-  //         }),
-  //         () => {
-  //           this.handleScroll();
-  //         },
-  //       );
-  //       if (gallery.length === 0) {
-  //         return toast('Sorry, there are no images matching your search query. Please try again.');
-  //       }
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  // }
-
-  // const { gallery, showModal, largeImageURL, imageTags, requestStatus } = this.state;
   const isLoading = requestStatus === 'pending';
   const showGallery = gallery.length > 0 && !isLoading;
 
   return (
     <div>
-      {showModal && <Modal onClose={toggleModal} largeImageURL={largeImageURL} alt={imageTags} />}
+      {showModal && <Modal onClose={toggleModal} largeImageURL={largeImageURL} alt={tags} />}
       <Searchbar onSearch={handleFormSubmit} />
       {isLoading && <Spinner />}
       <ImageGallery gallery={gallery} handleSelectedImage={handleSelectedImage} />

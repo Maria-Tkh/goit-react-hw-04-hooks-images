@@ -7,11 +7,11 @@ axios.defaults.baseURL = BASE_URL;
 axios.defaults.params = {
   key: API_KEY,
   image_type: 'photo',
+  orientation: 'horizontal',
+  safesearch: 'true',
 };
 
 export const fetchImages = async (imageTags, page) => {
-  const response = await axios.get(
-    `?q=${imageTags}&orientation=horizontal&safesearch=true&page=${page}&per_page=12`,
-  );
+  const response = await axios.get(`?q=${imageTags}&page=${page}&per_page=12`);
   return response.data.hits;
 };
