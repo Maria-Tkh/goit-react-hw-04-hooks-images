@@ -51,11 +51,15 @@ export const App = () => {
   // Реакция на изменение state, делаем запросы
 
   useEffect(() => {
-    async function getGallery(_, prevState) {
+    async function getGallery() {
       try {
         setRequestStatus('pending');
         const gallery = await fetchImages(imageTags, page);
-        setGallery(prevState => [...prevState.gallery, ...gallery]);
+        //       setGallery((prevState) => {
+        //   console.log(prevState);
+        //   return prevState;
+        // });
+        setGallery(prevState => [...prevState, ...gallery]);
         setRequestStatus('resolved');
         handleScroll();
         if (gallery.length === 0) {
