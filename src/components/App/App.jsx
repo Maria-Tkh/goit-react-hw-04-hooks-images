@@ -55,11 +55,11 @@ export const App = () => {
       try {
         if (imageTags === '') return;
         setRequestStatus('pending');
-        const gallery = await fetchImages(imageTags, page);
-        setGallery(prevState => [...prevState, ...gallery]);
+        const galleryList = await fetchImages(imageTags, page);
+        setGallery(prevState => [...prevState, ...galleryList]);
         setRequestStatus('resolved');
         handleScroll();
-        if (gallery.length === 0) {
+        if (galleryList.length === 0) {
           return toast('Sorry, there are no images matching your search query. Please try again.');
         }
       } catch (error) {
